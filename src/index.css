@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .vertical-rl {
+    writing-mode: vertical-rl;
+  }
+}
+
+/* Custom keyframes for cinematic atmospheric vibes */
+@keyframes slow-pan {
+  0% { transform: scale(1) translate(0px, 0px); }
+  50% { transform: scale(1.08) translate(-10px, 5px); }
+  100% { transform: scale(1) translate(0px, 0px); }
+}
+
+@keyframes grid-pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.35; }
+}
+
+@keyframes scanner-expand {
+  0% { transform: scale(0.6); opacity: 0; }
+  50% { opacity: 0.4; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+@keyframes slow-breathing {
+  0%, 100% { transform: scale(1); filter: brightness(0.9); }
+  50% { transform: scale(1.02); filter: brightness(1.15); }
+}
+
+.animate-slow-pan {
+  animation: slow-pan 25s infinite ease-in-out;
+}
+
+.animate-grid-pulse {
+  animation: grid-pulse 4s infinite ease-in-out;
+}
+
+.animate-scanner {
+  animation: scanner-expand 3.5s infinite linear;
+}
+
+.animate-breathing {
+  animation: slow-breathing 6s infinite ease-in-out;
+}
+
+/* Scrollbar customizations for a vintage archive feel */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(16, 185, 129, 0.4);
+}
+
+/* Scanline / Grain FX overlay */
+.overlay-grain {
+  background-image: radial-gradient(circle at center, transparent 0%, rgba(5, 5, 5, 0.8) 100%),
+                    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.01) 0px, rgba(255, 255, 255, 0.01) 1px, transparent 1px, transparent 2px);
+  background-size: 100% 100%, 100% 4px;
+}
+

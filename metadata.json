@@ -1,0 +1,6 @@
+{
+  "name": "HiddenPlaces",
+  "description": "Embark on a digital exploration of secret travel destinations, mysterious restaurants, local stories, and custom adventure routes guided by cinematic artificial intelligence.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
